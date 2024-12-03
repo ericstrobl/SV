@@ -23,12 +23,19 @@ We describe SV in detail in this paper. The `Experiments` folder contains code n
 A list with:
 
 `MR` = causal effects from treatments to factors
+
 `RtW` = causal effects from factors to treatments
+
 `tx_effects` = (MR) %*% (RtW), or the causal effects from treatments to factors
+
 `optimal_outcomes` = rotated factors
+
 `R` = the rotation matrix found by Varimax
+
 `sgn` = sign flip done to ensure sign determinancy
+
 `io` = re-ordering of optimal outcomes done to ensure permutation determinancy
+
 `eigen` = results of eigendecomposition of cor(Y)
 
 
