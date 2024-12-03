@@ -12,13 +12,23 @@ We describe SV in detail in this paper. The `Experiments` folder contains code n
 
 > library(SV)
 
+# Inputs
+
+`Tx` = vector of treatments for n samples
+
+`Y` = n by p matrix of p rating scale items
+
+`nc` (optional) = number of components/factors; default is number of unique treatments
+
+`eigen` (optional) = eigendecomposition of cor(Y) from previous output of SV; useful for minimizing run-time of permutation tests; default is NULL
+
 # Run the Algorithm
 
-> mod = generate_synth(nsamps=1000, nF=4) # generate synthetic data with five treatments and four latent factors
+> data = generate_synth(nsamps=1000, nF=4) # generate synthetic data with five treatments and four latent factors
 
-> out=SV(Tx=mod$Tx,Y=mod$Y) # run the SV algorithm on the data, where mod$Tx is a vector of treatments, and mod$Y are the individual items of a rating scale
+> out=SV(Tx=data$Tx,Y=data$Y) # run the SV algorithm on the data, where mod$Tx is a vector of treatments, and mod$Y are the individual items of a rating scale
 
-# Output
+# Outputs
 
 A list with:
 
