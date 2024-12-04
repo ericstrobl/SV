@@ -18,7 +18,7 @@ This is the R code repository for the Supervised Varimax (SV) algorithm. Treatme
 
 `nc` (optional) = number of components/factors; default is number of unique treatments
 
-`eigen` (optional) = eigendecomposition of cor(Y) from previous output of SV; useful for minimizing run-time of permutation tests; default is NULL
+`ee` (optional) = eigendecomposition of cor(Y) from previous output of SV; useful for minimizing run-time of permutation tests; default is NULL
 
 # Run the Algorithm
 
