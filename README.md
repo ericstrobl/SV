@@ -48,7 +48,7 @@ A list with:
 
 # Diagnostics
 
-> plot(sort(apply(SV$loadings^2,2,var),decreasing=T)) # cut at the elbow point, should be 4 factors in this example
+> plot(sort(apply(mod$MR^2,2,var),decreasing=T)) # cut at the elbow point, should be 3 factors in this example
 
 # Permutation tests
 
