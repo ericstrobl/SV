@@ -2,8 +2,6 @@
 
 This is the R code repository for the Supervised Varimax (SV) algorithm. Treatments tend to diffusely affect many items of a clinical rating scale with large amounts of noise. SV thus takes the individual items of a rating scale and compresses them into a few (e.g., 2-5) factors that maximally differentiate the treatments. The algorithm specifically performs a Varimax rotation on the matrix of causal effects from treatment to factors so that the causal effects are sparse and different.
 
-We describe SV in detail in this paper. The `Experiments` folder contains code needed to replicate the experimental results in the paper. CATIE and STAR*D data are available on the [NIMH Data Archive](https://nda.nih.gov/).
-
 # Installation
 
 > library(devtools)
