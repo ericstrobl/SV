@@ -16,7 +16,7 @@ posthoc_test <- function(mod,Tx,Y,nE,nperms=10000){
   for (p in 1:nperms){
     cat('\r',p)
     perm = sample(1:n,n,replace=FALSE)
-    mod1 = SV(dataC[,1],Y[perm,],ee = mod$eigen)
+    mod1 = SV(Tx,Y[perm,],ee = mod$eigen)
     pval = pval + (stat <= (apply(mod1$MR,2,max) - apply(mod1$MR,2,min)))
   }
   
