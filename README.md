@@ -46,4 +46,16 @@ A list with:
 
 `eigen` = results of eigendecomposition of cor(Y)
 
+# Diagnostics
 
+> plot(sort(apply(SV$loadings^2,2,var),decreasing=T)) # cut at the elbow point, should be 4 factors in this example
+
+# Permutation tests
+
+Omnibus:
+
+> aa
+
+Post-hoc:
+
+> aa
