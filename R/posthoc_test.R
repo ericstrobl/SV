@@ -22,7 +22,7 @@ posthoc_test <- function(mod,Tx,Y,nE,nperms=10000){
   
   ps = pval/nperms
   d = length(ps)
-  qs = qvalue(ps,pi0=(d-ne-1)/d)$qvalues
+  qs = qvalue(ps,pi0=(d-nE-1)/d)$qvalues
   
   return( list(p = pval/nperms, p_FDR = qs, stat =  stat) )
 }
