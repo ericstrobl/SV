@@ -48,7 +48,7 @@ A list with:
 
 # Diagnostics
 
-> plot(sort(apply(mod$MR^2,2,var),decreasing=T)) # cut at and below the elbow point; the elbow point should be at the 4th factor, so there are 3 clinically significant factors in this example
+> plot(sort(apply(mod$MR^2,2,var),decreasing=T)) # cut at and below the elbow point; the elbow point is very close to zero and should be at the 4th factor in this case, so there are 3 clinically significant factors
 
 # Permutation tests
 
