@@ -22,7 +22,7 @@ This is the R code repository for the Supervised Varimax (SV) algorithm. Treatme
 
 # Run the Algorithm
 
-> data = generate_synth(nsamps=1000, nF=3) # generate synthetic data with five treatments and four latent factors
+> data = generate_synth(nsamps=1000, nF=3) # generate synthetic data with five treatments and three latent factors
 
 > mod=SV(Tx=data$Tx,Y=data$Y) # run the SV algorithm on the data, where data$Tx is a vector of treatments, and data$Y are the individual items of a rating scale
 
