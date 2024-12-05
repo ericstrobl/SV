@@ -34,7 +34,7 @@ SV <- function(Tx,Y, nc=length(unique(Tx)), ee=NULL){
   coef = lm.fit(t_idx,Y)$coefficients
   
   # discover unrotated factors
-  if (is.null(eigen)){
+  if (is.null(ee)){
     ee = eigen(cov(Y))
   }
   
