@@ -1,4 +1,4 @@
-SV <- function(Tx,Y, nc=length(unique(Tx)), eigen=NULL){
+SV <- function(Tx,Y, nc=length(unique(Tx)), ee=NULL){
   # Supervised Varimax algorithm
   # Inputs:
   #   Tx = vector of treatments for n samples
