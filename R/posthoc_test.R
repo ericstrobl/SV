@@ -12,6 +12,9 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   #
   #
   # written by Eric V. Strobl, 12/3/2024
+
+  tx = unique(Tx)
+  nt = length(tx)
   
   pval = matrix(0,(nt^2-nt)/2,ncol(mod$MR)) # uncorrected p-values
   pFWER = matrix(0,(nt^2-nt)/2,ncol(mod$MR))
@@ -40,7 +43,6 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   
   # label comparisons
   labels = c()
-  tx = unique(Tx)
   for (c in 1:(length(tx)-1)){
     for (d in (c+1):length(tx)){
       labels = c(labels, paste(as.character(tx[c]), "-", as.character(tx[d]),sep=""))
