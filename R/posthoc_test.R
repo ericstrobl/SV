@@ -39,8 +39,8 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
     
     range = apply(mod1$MR,2,max) - apply(mod1$MR,2,min) # range statistic for FWER
     for (j in 1:ncol(mod$MR)){
-      pFWER[,j] = pFWER[,j] + (abs_diff[,j] < range[j])
-      pval[,j] = pval[,j] + (abs_diff[,j] < as.numeric(dist(mod1$MR[,j])))
+      pFWER[,j] = pFWER[,j] + (abs_diff[,j] <= range[j])
+      pval[,j] = pval[,j] + (abs_diff[,j] <= as.numeric(dist(mod1$MR[,j])))
     }
   }
   pval = pval/nperms
