@@ -1,8 +1,13 @@
 omnibus_test <- function(mod,Tx,Y,nperms=10000){
   # omnibus permutation testing
+  # Inputs:
   #   mod = original model from SV function
   #   Tx = vector of treatments for n samples
   #   Y = n by p matrix of p rating scale items
+  #
+  # Outputs:
+  #   p = p-value
+  #   stat = absolute sum statistic
   #
   #
   # written by Eric V. Strobl, 12/3/2024
