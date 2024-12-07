@@ -4,6 +4,7 @@ omnibus_test <- function(mod,Tx,Y,nperms=10000){
   #   mod = original model from SV function
   #   Tx = vector of treatments for n samples
   #   Y = n by p matrix of p rating scale items
+  #   nperms = number of permutations (default: 10000)
   #
   # Outputs:
   #   p = p-value
