@@ -5,9 +5,7 @@ This is the R code repository for the Supervised Varimax (SV) algorithm. Treatme
 The academic paper describing SV in detail can be found [here](https://www.medrxiv.org/content/10.1101/2024.12.03.24318424v1); it is currently under review. All code was tested in R version 4.3.1.
 
 # Installation
-First install devtools and BiocManager. Then:
-
-> BiocManager::install("qvalue")
+First install BiocManager. Then:
 
 > library(devtools)
 
