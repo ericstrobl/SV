@@ -8,22 +8,26 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   # Outputs:
   #   p = uncorrected p-values for each treatment pair and factor
   #   pFWER = FWER corrected p-values across treatments
-  #   stat = absolute difference statistic
+  #   stat = difference statistic
   #
   #
   # written by Eric V. Strobl, 12/3/2024
-
+  
   tx = unique(Tx)
   nt = length(tx)
   
   pval = matrix(0,(nt^2-nt)/2,ncol(mod$MR)) # uncorrected p-values
-  pFWER = matrix(0,(nt^2-nt)/2,ncol(mod$MR))
+  pFWER = pval
   n = nrow(Y)
   
   # compute absolute difference statistic for original samples
-  abs_diff = matrix(0,(nt^2-nt)/2,ncol(mod$MR))
+  abs_diff = pval
+  diff = pval
   for (j in 1:ncol(mod$MR)){
     abs_diff[,j] = as.numeric(dist(mod$MR[,j]))
+    
+    z = outer(mod$MR[,j],mod$MR[,j],'-'); 
+    diff[,j] = z[lower.tri(z)]
   }
   
   # perform permutation statistic
@@ -50,7 +54,7 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   }
   rownames(pval) = labels
   rownames(pFWER) = labels
-  rownames(abs_diff) = labels
+  rownames(diff) = labels
   
-  return( list(p = pval, pFWER = pFWER, stat =  abs_diff) )
+  return( list(p = pval, pFWER = pFWER, stat =  diff) )
 }
