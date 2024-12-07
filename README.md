@@ -57,8 +57,12 @@ A list with:
 
 Omnibus:
 
-> omnibus_test(mod,data$Tx,data$Y)
+> test = omnibus_test(mod,data$Tx,data$Y)
+
+> print(test)
 
 Post-hoc:
 
-> posthoc_test(mod,data$Tx,data$Y)
+> test = posthoc_test(mod,data$Tx,data$Y)
+
+> print(test)
