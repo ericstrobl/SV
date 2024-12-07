@@ -13,8 +13,6 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   #
   # written by Eric V. Strobl, 12/3/2024
   
-  require(qvalue)
-  
   pval = matrix(0,(nt^2-nt)/2,ncol(mod$MR)) # uncorrected p-values
   pFWER = matrix(0,(nt^2-nt)/2,ncol(mod$MR))
   n = nrow(Y)
