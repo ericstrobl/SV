@@ -20,7 +20,7 @@ posthoc_test <- function(mod,Tx,Y,nperms=10000){
   pFWER = pval
   n = nrow(Y)
   
-  # compute absolute difference statistic for original samples
+  # compute difference and absolute difference statistics for original samples
   abs_diff = pval
   diff = pval
   for (j in 1:ncol(mod$MR)){
