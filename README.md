@@ -25,7 +25,7 @@ First install the BiocManager and qvalue packages. Then:
 
 # Run the Algorithm
 
-> data = generate_synth(nsamps=10000, nF=3) # generate synthetic data with five treatments and three latent factors
+> data = generate_synth(nsamps=1000, nF=3) # generate synthetic data with 1000 samples, five treatments and three latent factors
 
 > mod=SV(Tx=data$Tx,Y=data$Y) # run the SV algorithm on the data, where data$Tx is a vector of treatments, and data$Y are the individual items of a rating scale
 
