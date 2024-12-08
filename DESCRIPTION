@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Eric V. Strobl
 Maintainer: Eric V. Strobl <eric.strobl@pitt.edu>
 Description: Supervised Varimax learns optimal outcomes from the individual items of a clinical rating scale. The optimal outcomes maximally differentiate between treatments.
-Depends:
+Depends: qvalue
 License: CC BY-NC 4.0
 Encoding: UTF-8
 LazyData: true
