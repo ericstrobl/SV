@@ -55,14 +55,6 @@ A list with:
 
 # Permutation tests
 
-Omnibus:
+> results = permutation_testing(mod,data$Tx,data$Y,nperm=1000)
 
-> test = omnibus_test(mod,data$Tx,data$Y)
-
-> print(test)
-
-Post-hoc:
-
-> test = posthoc_test(mod,data$Tx,data$Y)
-
-> print(test)
+> print(results)
