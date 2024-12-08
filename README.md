@@ -55,6 +55,6 @@ A list with:
 
 # Permutation tests
 
-> results = permutation_testing(mod,data$Tx,data$Y,nperms=10000)
+> results = permutation_testing(mod,data$Tx,data$Y,nperms=10000) # simultaneously performs omnibus test, post-hoc test of factors, and post-hoc test of treatment pairs
 
 > print(results)
