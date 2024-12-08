@@ -51,7 +51,7 @@ A list with:
 
 # Diagnostics
 
-> plot(sort(apply(mod$MR^2,2,var),decreasing=T)) # cut at and below the elbow point; the elbow point is very close to zero and should be at the 4th factor in this case, so there are 3 potentially meaningful factors
+> plot(sort(apply(mod$MR^2,2,var),decreasing=T)) # cut at and below the elbow point; the elbow point is very close to zero and should be around the third or fourth factor in this case, so there are 2-3 potentially meaningful factors
 
 # Permutation tests
 
